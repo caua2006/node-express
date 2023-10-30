@@ -12,3 +12,8 @@ app.listen(3000,()=>{
 app.get('/',(req,res)=>{
     res.sendFile(`${caminhoBase}/index.html`)
 })
+app.get("/user/:id",(req,res)=>{
+    const id = req.params.id;
+    console.log(id)
+    res.sendFile(`${caminhoBase}/usuarios.html`)
+})
